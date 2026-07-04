@@ -98,8 +98,8 @@ export default function LoginPage() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
         
         <div className="text-center mb-8 relative">
-          <div className="w-16 h-16 mx-auto bg-primary/10 border border-primary/30 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(0,194,255,0.3)]">
-            <Cpu className="w-8 h-8 text-primary" />
+          <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(0,194,255,0.4)] border border-primary/50 overflow-hidden ring-4 ring-primary/10">
+            <img src="/apple-touch-icon.png" alt="UrbanMind Logo" className="w-full h-full object-cover scale-110" />
           </div>
           <h1 className="text-3xl font-bold tracking-tight text-white mb-2">UrbanMind AI</h1>
           <p className="text-sm text-muted-foreground uppercase tracking-widest font-mono">
