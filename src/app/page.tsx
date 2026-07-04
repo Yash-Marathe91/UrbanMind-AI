@@ -5,6 +5,26 @@ import { ArrowRight, BrainCircuit, Activity, Cpu, ShieldCheck } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import { motion, Variants } from "framer-motion";
 
+function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
+    </svg>
+  );
+}
+
 export default function LandingPage() {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -34,6 +54,7 @@ export default function LandingPage() {
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             <Link href="#features" className="hover:text-white transition-colors">Platform</Link>
             <Link href="#architecture" className="hover:text-white transition-colors">Architecture</Link>
+            <Link href="#about" className="hover:text-white transition-colors">About Us</Link>
             <Link href="/docs" className="hover:text-white transition-colors">Documentation</Link>
           </div>
           <div className="flex items-center gap-4">
@@ -134,6 +155,61 @@ export default function LandingPage() {
               </motion.div>
             ))}
           </div>
+        </motion.div>
+      </section>
+      {/* About & Team Section */}
+      <section id="about" className="py-24 px-6 relative">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+          className="max-w-4xl mx-auto"
+        >
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Behind UrbanMind AI</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              This platform was engineered to simulate and manage autonomous decision intelligence 
+              for modern smart cities, featuring real-time spatial networking, Python-driven swarm simulations, 
+              and a cutting-edge React dashboard.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <motion.div variants={itemVariants} className="p-8 rounded-2xl bg-card/40 backdrop-blur-md border border-white/5 hover:border-primary/30 transition-all flex items-center gap-6 group">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
+                <span className="text-xl font-bold text-primary tracking-widest">YM</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white">Yash Marathe (You)</h3>
+                <p className="text-primary text-sm font-mono uppercase tracking-wider mb-1">Team Leader</p>
+                <p className="text-xs text-muted-foreground">Architect & Lead Developer</p>
+              </div>
+            </motion.div>
+            
+            <motion.div variants={itemVariants} className="p-8 rounded-2xl bg-card/40 backdrop-blur-md border border-white/5 hover:border-secondary/30 transition-all flex items-center gap-6 group">
+              <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/20 group-hover:scale-110 transition-transform">
+                <span className="text-xl font-bold text-secondary tracking-widest">KP</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white">Krishna Patil Rajput</h3>
+                <p className="text-secondary text-sm font-mono uppercase tracking-wider mb-1">Member</p>
+                <p className="text-xs text-muted-foreground">Core Contributor</p>
+              </div>
+            </motion.div>
+          </div>
+          
+          <motion.div variants={itemVariants} className="text-center">
+            <a 
+              href="https://github.com/Yash-Marathe91/UrbanMind-AI" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-white font-medium"
+            >
+              <GithubIcon className="w-5 h-5" />
+              View Repository on GitHub
+            </a>
+          </motion.div>
         </motion.div>
       </section>
     </div>
