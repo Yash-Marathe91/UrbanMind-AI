@@ -76,8 +76,8 @@ python swarm_brain.py
 
 ## 👥 The Team
 
-- **Yash Marathe** - Team Leader, Architect & Lead Developer
-- **Krishna Patil Rajput** - Member, Core Contributor
+- **Yash Marathe** - Co-Creator & Core Developer
+- **Krishna Patil Rajput** - Co-Creator & Core Developer
 
 ---
 

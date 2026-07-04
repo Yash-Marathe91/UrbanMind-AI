@@ -186,9 +186,9 @@ export default function LandingPage() {
                 <span className="text-xl font-bold text-primary tracking-widest">YM</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">Yash Marathe (You)</h3>
-                <p className="text-primary text-sm font-mono uppercase tracking-wider mb-1">Team Leader</p>
-                <p className="text-xs text-muted-foreground">Architect & Lead Developer</p>
+                <h3 className="text-xl font-bold text-white">Yash Marathe</h3>
+                <p className="text-primary text-sm font-mono uppercase tracking-wider mb-1">Co-Creator</p>
+                <p className="text-xs text-muted-foreground">Core Developer</p>
               </div>
             </motion.div>
             
@@ -198,8 +198,8 @@ export default function LandingPage() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Krishna Patil Rajput</h3>
-                <p className="text-secondary text-sm font-mono uppercase tracking-wider mb-1">Member</p>
-                <p className="text-xs text-muted-foreground">Core Contributor</p>
+                <p className="text-secondary text-sm font-mono uppercase tracking-wider mb-1">Co-Creator</p>
+                <p className="text-xs text-muted-foreground">Core Developer</p>
               </div>
             </motion.div>
           </div>
