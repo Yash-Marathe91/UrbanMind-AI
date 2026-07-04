@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 UrbanMind AI
+**AI-Powered Multi-Agent Decision Intelligence Platform for Smarter Communities**
 
-## Getting Started
+![UrbanMind AI Cover](https://github.com/Yash-Marathe91/UrbanMind-AI/assets/placeholder-cover.png)
 
-First, run the development server:
+UrbanMind AI is a next-generation command center designed to orchestrate and simulate an autonomous network of AI agents. It acts as the "Swarm Brain" for smart cities, ingesting real-time data, detecting anomalies across urban infrastructure (traffic, power, security), and executing autonomous decision intelligence with a human-in-the-loop fallback.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Core Features
+
+- 🧠 **Autonomous Python Swarm Brain**: A robust Python backend engine (`backend/swarm_brain.py`) that constantly simulates live city data, generates localized anomalies, and attempts self-healing protocols autonomously.
+- 🌍 **3D Swarm Command Center**: An immersive WebGL-powered 3D Earth visualization built with `React Three Fiber` that plots the swarm topology and data flow in real-time.
+- ⚡ **Real-Time Data Sync**: Fully integrated with **Supabase Realtime** and **Zustand**. When the Swarm Brain generates a new incident in the database, the frontend dashboard updates and alerts the operator instantaneously.
+- 🤖 **Swarm Assistant (Core AI)**: A floating NLP-driven chat widget integrated directly with the **Google Gemini 1.5 Flash API**, allowing operators to interrogate the swarm network using natural language.
+- 🔐 **Cyberpunk Security Gateway**: A meticulously designed, gamified authentication portal utilizing Supabase Auth and Framer Motion for secure operator login and registration.
+
+---
+
+## 🛠️ Technology Stack
+
+**Frontend Architecture:**
+- [Next.js 16](https://nextjs.org/) (App Router)
+- [React 19](https://react.dev/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/) (Animations)
+- [Three.js](https://threejs.org/) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/) (3D Visualization)
+- [Zustand](https://github.com/pmndrs/zustand) (State Management)
+- [shadcn/Base UI](https://ui.shadcn.com/) (Component Library)
+
+**Backend & Infrastructure:**
+- [Supabase](https://supabase.com/) (PostgreSQL Database, Realtime Subscriptions, Authentication)
+- Python 3.11+ (Simulation Engine)
+- [Google Gemini API](https://ai.google.dev/) (Core AI Assistant)
+
+---
+
+## 🚀 Local Development Setup
+
+To run UrbanMind AI locally, you need to run both the Next.js frontend and the Python Swarm Brain backend simultaneously.
+
+### 1. Prerequisites
+- Node.js 20+
+- Python 3.11+
+- A Supabase Project
+- A Google Gemini API Key
+
+### 2. Environment Variables
+Create a `.env.local` file in the root directory and add the following keys:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_MAPBOX_TOKEN=your_mapbox_token
+GEMINI_API_KEY=your_gemini_api_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Database Setup
+Execute the SQL queries found in `database.sql` and `supabase_auth.sql` in your Supabase SQL Editor to provision the required tables (`agents`, `incidents`, `system_metrics`, `profiles`) and setup Row Level Security (RLS).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Start the Frontend
+```bash
+npm install
+npm run dev
+```
+The dashboard will be available at `http://localhost:3000`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 5. Start the Swarm Brain
+In a new terminal window, initialize the Python environment and run the intelligence engine:
+```bash
+cd backend
+pip install -r requirements.txt
+python swarm_brain.py
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 👥 The Team
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Yash Marathe** - Team Leader, Architect & Lead Developer
+- **Krishna Patil Rajput** - Member, Core Contributor
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
