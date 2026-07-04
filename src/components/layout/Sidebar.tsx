@@ -35,8 +35,8 @@ export function Sidebar() {
   return (
     <aside className="w-64 border-r border-border bg-sidebar h-full flex flex-col shrink-0 overflow-y-auto">
       <div className="p-6 flex items-center gap-3">
-        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center shadow-[0_0_15px_rgba(0,194,255,0.4)] border border-primary/30 overflow-hidden">
-          <img src="/apple-touch-icon.png" alt="UrbanMind Logo" className="w-full h-full object-cover" />
+        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center shadow-[0_0_20px_rgba(0,194,255,0.6)] border border-primary/50 overflow-hidden ring-2 ring-primary/20">
+          <img src="/apple-touch-icon.png" alt="UrbanMind Logo" className="w-full h-full object-cover scale-110" />
         </div>
         <span className="font-bold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
           UrbanMind AI

@@ -48,8 +48,8 @@ export default function LandingPage() {
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg overflow-hidden border border-primary/30 shadow-[0_0_15px_rgba(0,194,255,0.3)]">
-              <img src="/apple-touch-icon.png" alt="UrbanMind Logo" className="w-full h-full object-cover" />
+            <div className="w-9 h-9 rounded-full overflow-hidden border border-primary/50 shadow-[0_0_20px_rgba(0,194,255,0.6)] ring-2 ring-primary/20">
+              <img src="/apple-touch-icon.png" alt="UrbanMind Logo" className="w-full h-full object-cover scale-110" />
             </div>
             <span className="font-bold text-xl tracking-tight text-white">UrbanMind AI</span>
           </div>
@@ -74,11 +74,14 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+        {/* Cyber Grid Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
+        
         <motion.div 
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] pointer-events-none" 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" 
         />
         
         <motion.div 
